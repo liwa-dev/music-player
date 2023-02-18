@@ -17,6 +17,10 @@
 
 This is a music player that allows you to search for and play songs from youtube. The player features a simple and intuitive interface with controls for play/pause, volume, and looping. The search function utilizes an API built by the developer to retrieve search results from YouTube, which are then converted to direct links that can be played directly in the player. The project is built using HTML, CSS, and JavaScript and does not require any server-side code or external dependencies.
 
+
+## Test
+[https://liwa-dev.github.io/music-player](https://liwa-dev.github.io/music-player)
+
 ## Built With
 
 HTML
