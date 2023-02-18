@@ -9,7 +9,7 @@
   </p>
 </p>
 
-![License](https://img.shields.io/github/license/lotusliwa/music-visualizer)
+![License](https://img.shields.io/github/license/liwa-dev/music-player)
 
 ## About The Project
 
@@ -25,7 +25,7 @@ JavaScript
 
 ### Installation
 
-1. Clone the repository: [https://github.com/lotusliwa/music-visualizer.git](https://github.com/lotusliwa/music-visualizer.git)
+1. Clone the repository: [https://github.com/liwa-dev/music-player.git](https://github.com/liwa-dev/music-player.git)
 
 3. Open the index.html file in your web browser.
 
@@ -34,7 +34,7 @@ JavaScript
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/lotusliwa/music-visualizer/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/liwa-dev/music-player/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
 
@@ -44,4 +44,4 @@ If you would like to contribute to this project, please fork the repository and 
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/lotusliwa/music-visualizer/blob/master/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/liwa-dev/music-player/blob/master/License) for more information.
