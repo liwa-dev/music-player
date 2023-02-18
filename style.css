@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    background: rgb(21,30,44);
+    background: radial-gradient(circle, rgba(21,30,44,1) 0%, rgba(11,18,30,1) 96%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the input wrapper */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    max-width: 600px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Style the search input */
+.input-wrapper > input[type=text] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Style the search button */
+.input-wrapper > button[type=submit] {
+    padding: 7px;
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Style the search icon */
+.fa-search {
+    color: #555;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.fa-search:hover {
+    color: #555;
+    opacity: 1;
+}
+
+/* Remove defaults css */
+*:focus {
+    outline: none;
+}
+
+
+section {
+    color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+section {
+    user-select: none;
+}
+
+section > ul {
+    overflow: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+section > ul > li {
+    transition: transform 0.5s, background 0.5s;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    transform: scale(1);
+    margin: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    width: 50%;
+}
+
+section > ul > li > img {
+    width: 100px;
+    border-radius: 10px;
+
+}
+
+section > ul > li > span{
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+section > ul > li:hover {
+    transform: scale(1.1);
+    background: rgb(242,113,255, 1);
+    background: linear-gradient(90deg, rgba(242,113,255,1) 0%, rgba(234,103,255,1) 19%, rgba(196,78,255,1) 58%, rgba(117,217,255,1) 100%);    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+section > ul > li:active {
+    transform: scale(0.9);
+    background: rgb(242,113,255);
+    background: linear-gradient(90deg, rgba(242,113,255,1) 0%, rgba(234,103,255,1) 19%, rgba(196,78,255,1) 58%, rgba(117,217,255,1) 100%);    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 2s ease-in-out;
+    transform: translateY(500px);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;   /* Height of the footer */
+    background: rgb(242,113,255);
+    background: linear-gradient(90deg, rgba(242,113,255,1) 0%, rgba(234,103,255,1) 19%, rgba(196,78,255,1) 58%, rgba(117,217,255,1) 100%);
+    left: 0;
+}
+
+
+footer > div > img {
+    user-select: none;
+    width: 110px;
+    height: 113px;
+    margin-left: 80px;
+    object-fit: cover;
+    position: relative;
+    bottom: 30px;
+    border-radius: 15px;
+}
+
+footer > div {
+    padding-right: 10px;
+}
+
+footer > div > .name {
+    user-select: text;
+    color: white;
+    width: 150px;    
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer > div > .menu > i {
+    user-select: none;
+    color: white;
+    font-size: 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+footer > div > .menu > i:hover {
+    user-select: none;
+    font-size: 20px;
+    opacity: 1;
+}
+
+footer > div:nth-child(3) {
+    padding-right: 100px;
+
+}
+
+
+.progress-bar {
+    user-select: none;
+    height: 5px;
+    background-color: #111111;
+    /* position: absolute; */ /* Remove this line */
+    /* width: 50%; */ /* Remove or comment out this line */
+    left: 0; /* Add this line */
+    right: 0; /* Add this line */
+    margin-right: 100px;
+    margin-left: 500px;
+    position: fixed;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #007bff;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    left: 0;
+    width: 0%;
+  }
+
+
+  .startduration {
+    position: relative;
+    right: 55px;
+    top: 11px;
+    color: white;
+    font-size: 12px;
+  }
+
+  .endduration {
+    color: white;
+    position: absolute;
+    right: 55px;
+    bottom: 8px;
+    font-size: 12px;
+}
