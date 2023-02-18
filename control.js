@@ -7,16 +7,6 @@ let toggleV = false;
 let startdur = document.querySelector('.startduration');
 let enddur = document.querySelector('.endduration')
 
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-if (isMobile) {
-  window.addEventListener("orientationchange", function () {
-    if (screen.orientation.type === "portrait-primary") {
-      screen.orientation.lock("landscape-primary");
-    }
-  });
-}
-
 
 
 
@@ -25,10 +15,26 @@ async function main(e) {
     const menuText = document.querySelector(".name");
     const iconPlay = document.querySelector(".menu");
     const footer = document.querySelector('footer');
-    footer.style.transform = "translateY(0px)"; // if loaded then make footer 0 to show music menu 
-
+    audio.addEventListener('play', () => {
+        // Display the footer at the bottom of the screen (0px)
+        footer.style.transform = "translateY(0px)";
+        console.log('song is playing');
+    });
+    
+    audio.addEventListener('loadedmetadata', () => {
+        console.log('song has changed');
+        footer.style.transform = "translateY(500px)";
+    });
+    
+    audio.addEventListener('canplaythrough', () => {
+        // Move the footer back to the bottom of the screen (0px)
+        console.log('loaded');
+        footer.style.transform = "translateY(0px)";
+    });
+    
     recherche(e.children[0].src);
     l = await getAudio(urlVideo)
+    console.log(l.url);
     audio.src = l.url
     progressBar();
     audio.play();
@@ -69,6 +75,17 @@ iconVolume.addEventListener('click', ()=> {
 })
 
 
+const iconLoop = document.querySelector(".menu i:nth-child(3)");
+document.querySelector('.textLoop').textContent = audio.loop? "Enabled" : "Disabled"
+document.querySelector('.textLoop').style.color = audio.loop? "#00ff00" : "#ff0000"
+iconLoop.addEventListener('click', ()=> {
+    audio.loop = !audio.loop;
+    document.querySelector('.textLoop').textContent = audio.loop? "Enabled" : "Disabled"
+    document.querySelector('.textLoop').style.color = audio.loop? "#00ff00" : "#ff0000"
+})
+
+
+
 function progressBar() {
     const progress = document.querySelector('.progress');
     const progressBar = document.querySelector('.progress-bar');
@@ -87,10 +104,6 @@ progressBar.addEventListener('click', (event) => {
       
 }
 
-
-// Listen for when the audio has loaded its metadata
-
-
 audio.addEventListener('loadedmetadata', () => {
     const duration = Math.floor(audio.duration); // Round down to nearest second
     enddur.textContent = formatTime(duration);
@@ -99,7 +112,7 @@ audio.addEventListener('loadedmetadata', () => {
     setInterval(() => {
       const currentTime = Math.floor(audio.currentTime);
         startdur.textContent = formatTime(currentTime);
-        enddur.textContent = formatTime(duration);
+        //enddur.textContent = formatTime(duration);
     }, 500);
   });
 
@@ -163,6 +176,11 @@ async function getAudio(p){
 
 document.querySelector('.input-wrapper').addEventListener('keypress', async function (e) {
     if (e.key === 'Enter') {
+        input = document.querySelector('.input-wrapper')
+        input.classList.add('effectBtn')
+        setTimeout(() => {
+            input.classList.remove('effectBtn')   
+        },200);
         l = await search(e.target.value)
         dataSongs.push(l);
         createItems(l);
@@ -198,7 +216,4 @@ function createItems(arr) {
         
     }
     refreshBtns();
-
-    
-
 }
