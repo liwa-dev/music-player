@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music visualizer</title>
+    <title>Music Player</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -17,28 +17,34 @@
         <ul>
             What are you looking for?
         </ul>
+        <div id="waveform"></div>
     </section>
     <footer>
         <div class="imgMenu">
-            <img src="https://img.youtube.com/vi/_WgKrKKkZgA/sddefault.jpg" alt="" >
+            <img src="https://i.ibb.co/f8G59NW/Black-question-mark.png" alt="Black-question-mark">
         </div>
         <div>
-            <span class="name">Name</span>
+            <span class="name">?</span>
         </div>
         <div>
             <span class="menu">
                 <i class="fas fa-circle-play fa-thin"></i> 
                 <i class="fas fa-volume-up fa-fw"></i>
+                <i class="fas fa-redo"></i>
+                <span class="textLoop"></span>
             </span>
         </div>
         <div>
-            <span class="startduration">test</span>
+            <span class="startduration">?</span>
             <div class="progress-bar">
                 <div class="progress"></div>
               </div>
-            <span class="endduration">test</span>
+            <span class="endduration">?</span>
         </div>
     </footer>
     <script src="control.js"></script>
 </body>
 </html>
+
+
+
